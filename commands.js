@@ -1,0 +1,1 @@
+Office.onReady(function(){}),"undefined"!=typeof window&&(window.showTaskpane=function(n){n.completed()});
