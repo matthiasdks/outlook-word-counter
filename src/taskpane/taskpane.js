@@ -3,8 +3,35 @@
 Office.onReady((info) => {
     if (info.host === Office.HostType.Outlook) {
         document.getElementById('count-words').onclick = countWords;
+        // Nutzerinformationen anzeigen
+        tryShowUserInfo();
     }
 });
+
+/**
+ * Zeigt Nutzerinformationen (Name/E-Mail) im Taskpane, falls verfügbar
+ */
+function tryShowUserInfo() {
+    try {
+        const profile = Office.context?.mailbox?.userProfile;
+        if (!profile) return;
+
+        const name = profile.displayName || '';
+        const email = profile.emailAddress || '';
+
+        if (name || email) {
+            const userInfo = document.getElementById('user-info');
+            const nameEl = document.getElementById('user-name');
+            const emailEl = document.getElementById('user-email');
+            if (nameEl) nameEl.textContent = name;
+            if (emailEl) emailEl.textContent = email;
+            if (userInfo) userInfo.style.display = 'block';
+        }
+    } catch (e) {
+        // still proceed silently; user info is optional
+        console.warn('Konnte Nutzerinfo nicht lesen:', e);
+    }
+}
 
 /**
  * Zählt Wörter und andere Statistiken in der aktuellen E-Mail

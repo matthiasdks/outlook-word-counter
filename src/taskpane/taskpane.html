@@ -119,12 +119,30 @@
             font-weight: bold;
             color: #333;
         }
+    
+    /* Nutzerinfo Abschnitt */
+    .user-info {
+        margin-bottom: 15px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #eee;
+    }
     </style>
 </head>
 
 <body>
     <div class="container">
         <h1>📊 Wortzähler</h1>
+        
+        <div id="user-info" class="user-info" style="display: none;">
+            <div class="detail-item">
+                <span class="detail-label">Angemeldet:</span>
+                <span id="user-name" class="detail-value"></span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">E-Mail:</span>
+                <span id="user-email" class="detail-value"></span>
+            </div>
+        </div>
         
         <button id="count-words" class="button">Wörter zählen</button>
         
