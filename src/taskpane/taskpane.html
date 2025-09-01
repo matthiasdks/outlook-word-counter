@@ -1,4 +1,16 @@
-<!doctype html><html><head><meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=Edge"/><meta name="viewport" content="width=device-width,initial-scale=1"><title>E-Mail Wortzähler</title><script src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script><style>body {
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E-Mail Wortzähler</title>
+    
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+    
+    <style>
+        body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 20px;
@@ -106,4 +118,57 @@
         .detail-value {
             font-weight: bold;
             color: #333;
-        }</style><script defer="defer" src="taskpane.js"></script></head><body><div class="container"><h1>📊 Wortzähler</h1><button id="count-words" class="button">Wörter zählen</button><div id="loading" class="loading" style="display: none;">Analysiere E-Mail...</div><div id="error" class="error" style="display: none;"></div><div id="results" style="display: none;"><div class="stats-grid"><div class="stat-card"><span id="word-count" class="stat-number">0</span><div class="stat-label">Wörter</div></div><div class="stat-card"><span id="char-count" class="stat-number">0</span><div class="stat-label">Zeichen</div></div><div class="stat-card"><span id="char-no-spaces" class="stat-number">0</span><div class="stat-label">Zeichen (ohne Leerzeichen)</div></div><div class="stat-card"><span id="paragraph-count" class="stat-number">0</span><div class="stat-label">Absätze</div></div></div><div class="details"><div class="detail-item"><span class="detail-label">Sätze:</span> <span id="sentence-count" class="detail-value">0</span></div><div class="detail-item"><span class="detail-label">Durchschn. Wörter/Satz:</span> <span id="avg-words-sentence" class="detail-value">0</span></div><div class="detail-item"><span class="detail-label">Lesezeit (ca.):</span> <span id="reading-time" class="detail-value">0 Min.</span></div></div></div></div></body></html>
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>📊 Wortzähler</h1>
+        
+        <button id="count-words" class="button">Wörter zählen</button>
+        
+        <div id="loading" class="loading" style="display: none;">
+            Analysiere E-Mail...
+        </div>
+        
+        <div id="error" class="error" style="display: none;"></div>
+        
+        <div id="results" style="display: none;">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span id="word-count" class="stat-number">0</span>
+                    <div class="stat-label">Wörter</div>
+                </div>
+                <div class="stat-card">
+                    <span id="char-count" class="stat-number">0</span>
+                    <div class="stat-label">Zeichen</div>
+                </div>
+                <div class="stat-card">
+                    <span id="char-no-spaces" class="stat-number">0</span>
+                    <div class="stat-label">Zeichen (ohne Leerzeichen)</div>
+                </div>
+                <div class="stat-card">
+                    <span id="paragraph-count" class="stat-number">0</span>
+                    <div class="stat-label">Absätze</div>
+                </div>
+            </div>
+            
+            <div class="details">
+                <div class="detail-item">
+                    <span class="detail-label">Sätze:</span>
+                    <span id="sentence-count" class="detail-value">0</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Durchschn. Wörter/Satz:</span>
+                    <span id="avg-words-sentence" class="detail-value">0</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Lesezeit (ca.):</span>
+                    <span id="reading-time" class="detail-value">0 Min.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
