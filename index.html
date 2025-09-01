@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outlook Wortzähler Add-In</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #0078d4, #106ebe);
+            color: white;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+        
+        .description {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .link {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .status {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(0, 255, 0, 0.2);
+            border-radius: 8px;
+            border-left: 4px solid #00ff00;
+        }
+        
+        .instructions {
+            text-align: left;
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .step {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">📊</div>
+        <h1>Outlook Wortzähler</h1>
+        <div class="description">
+            Ein professionelles Add-In für Microsoft Outlook, das Wörter, Zeichen, Absätze und andere Textstatistiken in E-Mails zählt.
+        </div>
+        
+        <div class="status">
+            <strong>✅ Add-In ist online und einsatzbereit!</strong>
+        </div>
+        
+        <div class="links">
+            <a href="taskpane.html" class="link">📱 Taskpane anzeigen</a>
+            <a href="manifest.xml" class="link">📄 Manifest herunterladen</a>
+            <a href="https://github.com/matthiasdks/outlook-word-counter" class="link">💻 GitHub Repository</a>
+        </div>
+        
+        <div class="instructions">
+            <h3>🚀 Installation in Outlook:</h3>
+            <div class="step">1. <strong>Manifest herunterladen:</strong> Klicken Sie auf "Manifest herunterladen" oben</div>
+            <div class="step">2. <strong>Outlook öffnen:</strong> Gehen Sie zu Outlook Web oder Desktop</div>
+            <div class="step">3. <strong>Add-In hinzufügen:</strong> Einstellungen → Add-Ins → "Aus Datei hinzufügen"</div>
+            <div class="step">4. <strong>Manifest laden:</strong> Wählen Sie die heruntergeladene <code>manifest.xml</code></div>
+            <div class="step">5. <strong>Fertig!</strong> Der "Wörter zählen" Button erscheint im Ribbon</div>
+        </div>
+        
+        <div style="margin-top: 40px; font-size: 0.9em; opacity: 0.8;">
+            <p>Entwickelt für Microsoft Outlook 365 • Unterstützt Web & Desktop</p>
+            <p>URL: <code>https://matthiasdks.github.io/outlook-word-counter/</code></p>
+        </div>
+    </div>
+</body>
+</html>
