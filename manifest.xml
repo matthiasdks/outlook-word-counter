@@ -11,9 +11,9 @@
   <DefaultLocale>de-DE</DefaultLocale>
   <DisplayName DefaultValue="E-Mail Wortzähler"/>
   <Description DefaultValue="Zählt Wörter in der aktuell ausgewählten E-Mail"/>
-  <IconUrl DefaultValue="https://via.placeholder.com/32x32/0078d4/ffffff.png?text=WC"/>
-  <HighResolutionIconUrl DefaultValue="https://via.placeholder.com/80x80/0078d4/ffffff.png?text=WC"/>
-  <SupportUrl DefaultValue="https://localhost:3000/support"/>
+  <IconUrl DefaultValue="https://matthiasdks.github.io/outlook-word-counter/assets/icon-32.svg"/>
+  <HighResolutionIconUrl DefaultValue="https://matthiasdks.github.io/outlook-word-counter/assets/icon-80.svg"/>
+  <SupportUrl DefaultValue="https://matthiasdks.github.io/outlook-word-counter"/>
   
   <Hosts>
     <Host Name="Mailbox"/>
@@ -28,7 +28,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://localhost:3000/taskpane.html"/>
+        <SourceLocation DefaultValue="https://matthiasdks.github.io/outlook-word-counter/taskpane.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -80,13 +80,13 @@
     
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://via.placeholder.com/16x16/0078d4/ffffff.png?text=WC"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://via.placeholder.com/32x32/0078d4/ffffff.png?text=WC"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://via.placeholder.com/80x80/0078d4/ffffff.png?text=WC"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://matthiasdks.github.io/outlook-word-counter/assets/icon-16.svg"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://matthiasdks.github.io/outlook-word-counter/assets/icon-32.svg"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://matthiasdks.github.io/outlook-word-counter/assets/icon-80.svg"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Commands.Url" DefaultValue="https://localhost:3000/commands.html"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
+        <bt:Url id="Commands.Url" DefaultValue="https://matthiasdks.github.io/outlook-word-counter/commands.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://matthiasdks.github.io/outlook-word-counter/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GroupLabel" DefaultValue="Wortzähler"/>
